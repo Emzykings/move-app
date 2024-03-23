@@ -75,7 +75,7 @@ const columns = [
 export default function ProcurementPage() {
   const [age, setAge] = React.useState("");
   const [modalId, setModalId] = React.useState();
-
+  const storeduserName = localStorage.getItem("username");
   const handleChange = (event) => {
     setAge(event.target.value);
   };
@@ -197,7 +197,7 @@ export default function ProcurementPage() {
       }}
     >
       <div className="orders">
-        <h1>welcome Ayotayo</h1>
+        <h1>welcome {storeduserName}</h1>
         <h1
           style={{
             fontSize: "30px",
